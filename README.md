@@ -25,8 +25,8 @@ This is a simple Chrome extension and Node.js server that allows users to upload
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/repositoryname.git
-cd repositoryname
+git clone https://github.com/abhishek210597/Chrome_Extension
+cd Chrome_Extension
 ```
 
 
@@ -36,15 +36,13 @@ cd repositoryname
 Install the required Node.js packages using npm:
 
 ```bash
-Copy code
-npm install
+npm install formidable
 ```
 
 ### 3. Start the Server
 To start the local file upload server, run:
 
 ``` bash
-Copy code
 node server.js
 ```
 The server will start on http://localhost:8000.
@@ -54,16 +52,17 @@ Open Chrome and navigate to chrome://extensions/.
 Enable Developer mode.
 Click Load unpacked and select the chrome-extension folder from this repository.
 The extension will appear in the toolbar.
-5. Upload a File
+
+### 5. Upload a File
 Click the extension icon to generate the QR code.
 Scan the QR code with your phone (make sure both the computer and phone are on the same Wi-Fi network).
 Select a file on the mobile device to upload.
 The file will be saved in the uploads folder on your local server.
 File Storage
 By default, files are uploaded to the uploads folder inside the project directory. If you need to upload files to cloud storage (e.g., AWS S3, Google Cloud Storage), you will need to modify the server.js file accordingly. Future versions may include cloud storage support.
-
+##
 Folder Structure
-plaintext
+```plaintext
 Copy code
 repositoryname/
 │
@@ -80,16 +79,17 @@ repositoryname/
 ├── package.json           # Dependencies and project metadata
 ├── server.js              # Node.js server to handle file uploads
 └── README.md              # Project documentation
-Known Issues
+```
+### Known Issues
 File upload is limited to local storage: Currently, files are uploaded to the local filesystem of the server. In future updates, we may add support for cloud storage services (e.g., AWS, Google Cloud).
 Error when devices are not on the same network: Ensure that both your computer and mobile device are connected to the same Wi-Fi network.
 Future Enhancements
 Add cloud storage integration (AWS S3, Google Cloud Storage).
 Improve error handling and upload feedback.
 Provide a better user interface for mobile uploads.
-License
-This project is licensed under the MIT License.
 
+```License
+This project is licensed under the MIT License.
 vbnet
 Copy code
 
@@ -98,3 +98,4 @@ Copy code
 - Add any other relevant details, such as contributing guidelines, if needed.
 
 This README will help users understand how to set up and use your file-upload service on localhos
+```
